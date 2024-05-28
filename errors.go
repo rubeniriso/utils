@@ -9,9 +9,8 @@ type ApiError struct {
 }
 
 func permissionDenied(w http.ResponseWriter) {
-	jsonUtils.WriteJSON(w, http.StatusForbidden, ApiError{Error: "permission denied"})
+	WriteJSON(w, http.StatusForbidden, ApiError{Error: "permission denied"})
 }
 func badRequest(w http.ResponseWriter) {
-	jsonUtils.WriteJSON(w, http.StatusForbidden, ApiError{Error: "bad request"})
+	WriteJSON(w, http.StatusForbidden, ApiError{Error: "bad request"})
 }
-
